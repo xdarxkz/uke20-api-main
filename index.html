@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>Brewery Map</title>
+    <style>
+        .top-breweries {
+            padding: 1rem;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 1rem;
+        }
+        .top-breweries ul {
+            list-style: none;
+            padding: 0;
+        }
+        .top-breweries li {
+            margin: 0.5rem 0;
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header class="header_main">
+        <div id="menu_bar">
+            <input id="searchbar" list="states" type="text" placeholder="Enter a state...">
+            <datalist id="states">
+                <option value="Alabama">
+                <option value="Alaska">
+                <option value="Arizona">
+                <option value="Arkansas">
+                <option value="California">
+                <option value="Colorado">
+                <option value="Connecticut">
+                <option value="Delaware">
+                <option value="Florida">
+                <option value="Georgia">
+                <option value="Hawaii">
+                <option value="Idaho">
+                <option value="Illinois">
+                <option value="Indiana">
+                <option value="Iowa">
+                <option value="Kansas">
+                <option value="Kentucky">
+                <option value="Louisiana">
+                <option value="Maine">
+                <option value="Maryland">
+                <option value="Massachusetts">
+                <option value="Michigan">
+                <option value="Minnesota">
+                <option value="Mississippi">
+                <option value="Missouri">
+                <option value="Montana">
+                <option value="Nebraska">
+                <option value="Nevada">
+                <option value="New Hampshire">
+                <option value="New Jersey">
+                <option value="New Mexico">
+                <option value="New York">
+                <option value="North Carolina">
+                <option value="North Dakota">
+                <option value="Ohio">
+                <option value="Oklahoma">
+                <option value="Oregon">
+                <option value="Pennsylvania">
+                <option value="Rhode Island">
+                <option value="South Carolina">
+                <option value="South Dakota">
+                <option value="Tennessee">
+                <option value="Texas">
+                <option value="Utah">
+                <option value="Vermont">
+                <option value="Virginia">
+                <option value="Washington">
+                <option value="West Virginia">
+                <option value="Wisconsin">
+                <option value="Wyoming">
+                <option value="Dublin">
+            </datalist>
+            <button type="submit"><p><i class="fa-solid fa-magnifying-glass"></i></p></button>
+        </div>
+        <div id="logo_main">
+            <p><i class="fa-solid fa-plate-wheat"></i></p>
+        </div>
+    </header>
+    <section class="main_main">
+        <div id="info">
+            <h1>Click the photo to see the map</h1>
+            <p class="highlight">API is a set of rules and mechanisms by which one application or component interacts with the others...</p>
+        </div>
+        <div id="mapContainer">
+            <img id="mapImage" src="beer2.png" alt="Choose a brewery" title="Choose a brewery">
+            <div id="map1"></div>
+        </div>
+    </section>
+    <div id="topBreweries" class="top-breweries">
+        <h3>Top 3 Most Popular Breweries</h3>
+        <ul id="breweriesList"></ul>
+    </div>
+    <script src="code/menu.js"></script>
+    <script src="code/main.js"></script>
+</body>
+</html>
